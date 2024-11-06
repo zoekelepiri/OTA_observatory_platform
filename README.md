@@ -20,3 +20,5 @@ The OTA Observatory Platform is a front-end web application that provides detail
   <b>Statistical Trends:</b> Present the evolution of key variables over time.
   
   <b>Charts and Analytics:</b> Display detailed statistical data through interactive charts.
+
+** <b> Check out the demo for more information!** </b>
