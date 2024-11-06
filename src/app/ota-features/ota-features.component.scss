@@ -1,0 +1,50 @@
+.features-container {
+  max-width: 1000px;
+  width: 80%;
+  .feature {
+    &:hover {
+      background-color: #f1f1f1;
+    }
+  }
+}
+.feature-card {
+  background-color: #ffffff; /* White background */
+  border: 1px solid #ddd; /* Light border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Space between icon and text */
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners */
+
+  &:hover {
+    transform: translateY(-5px); /* Slightly lift card on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* More shadow on hover */
+    border-color: #007bff; /* Change border color on hover */
+  }
+}
+
+.feature-icon {
+  font-size: 2rem; /* Bigger icon */
+  color: #007bff; /* Primary color for the icon */
+}
+
+.feature-title {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333; /* Darker text for better contrast */
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .feature-card {
+    flex-direction: column; /* Stack icon and text on smaller screens */
+    text-align: center;
+  }
+
+  .feature-title {
+    font-size: 1.1rem; /* Slightly smaller title on smaller screens */
+  }
+}
+

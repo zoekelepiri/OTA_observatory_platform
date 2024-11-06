@@ -1,0 +1,16 @@
+<div class="grid">
+  <div class="map-container col-10">
+    <div class="map-frame">
+      <div #mapContainer style="height: 1000px"></div>
+    </div>
+  </div>
+  <div class="col-2">
+    <app-selected-info
+      [selectedRegion]="selectedRegion"
+      [selectedPrefecture]="selectedPrefecture"
+      [currentPrefectures]="currentPrefectures"
+    >
+    </app-selected-info>
+    <!--  Selected info Component [selectedRegion]="selectedRegion" [selectedPrefecture]="selectedPrefecture" -->
+  </div>
+</div>

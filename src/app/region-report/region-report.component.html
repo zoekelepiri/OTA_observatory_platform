@@ -1,0 +1,52 @@
+<ng-container *ngIf="!loading && region">
+  <div class="mx-auto region-report-container">
+    <div class="bg-gray-200 pb-3">
+      <div class="header flex flex-column align-items-center mx-auto mt-3">
+        <div>
+          <h1>ΠΕΡΙΦΕΡΕΙΑ {{ region.name }}</h1>
+        </div>
+
+        <div class="grid">
+
+          <app-region-report-info-card
+            class="col-3"
+            infoLabel="Νομοί"
+            [infoValue]="region.totalPrefectures"
+          ></app-region-report-info-card>
+
+          <app-region-report-info-card
+            class="col-3"
+            infoLabel="Οργανισμοί Τοπικής Αυτοδιοίκησης"
+            [infoValue]="region.totalOTA"
+          ></app-region-report-info-card>
+
+          <app-region-report-info-card
+            class="col-3"
+            infoLabel="Ποσοστό Ανεργίας"
+            [infoValue]="region.unemploymentRate + '%'"
+          ></app-region-report-info-card>
+
+          <app-region-report-info-card
+            class="col-3"
+            infoLabel="Αριθμός Εγκλημάτων"
+            [infoValue]="region.criminalityRate"
+          ></app-region-report-info-card>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="grid report-content mx-auto">
+      <div class="flex flex-column gap-2 col-6">
+        <h2 class="pl-3">
+          Νομοί
+        </h2>
+        <div *ngFor="let p of region.prefectures" class="border-2 border-300 border-round p-3 cursor-pointer feature flex gap-2 align-items-center hover:bg-black-alpha-10"
+          (click)="navigateToPrefectureReport(p)"
+        >
+          ΝΟΜΟΣ {{ p.nameGr }}
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>

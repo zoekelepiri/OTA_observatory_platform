@@ -1,0 +1,80 @@
+<ng-container *ngIf="!loading && prefecture">
+  <div class="mx-auto prefecture-report-container">
+    <div class="header flex flex-column align-items-center">
+      <h1>ΝΟΜΟΣ {{ prefecture.nameGr }}</h1>
+
+      <div class="grid justify-content-center w-full">
+        <app-region-report-info-card
+          class="col-3"
+          infoLabel="Οργανισμοί Τοπικής Αυτοδιοίκησης"
+          [infoValue]="prefecture.otas.length"
+        ></app-region-report-info-card>
+
+        <app-region-report-info-card
+          class="col-3"
+          infoLabel="Έκταση"
+          infoValue="{{((prefecture.shapeArea / 1000000) | number:'1.2-2':'el-GR') + ' km²'}}"
+        ></app-region-report-info-card>
+
+      </div>
+    </div>
+
+    <section>
+      <h2>
+        Πρωτεύουσα
+      </h2>
+      <div class="bg-white p-2 border-round shadow-2">
+        <p class="font-bold">
+          {{ prefecture.capital.name }}
+        </p>
+        <p>
+          <strong>Πληθυσμός:</strong> {{ prefecture.capital.population | number : '' : 'el-GR' }}
+        </p>
+        <p>
+          <strong>Έκταση:</strong> {{ prefecture.capital.area | number:'':'el-GR' }} km²
+        </p>
+      </div>
+    </section>
+
+    <div>
+      <h2>
+        Δεδομένα ΟΤΑ
+      </h2>
+      <!-- Diagrams -->
+      <div class="diagrams-flex-container">
+        <div class="diagram-card">
+          <app-prefecture-confiscations-per-month-diagram
+            [prefecture]="prefecture">
+          </app-prefecture-confiscations-per-month-diagram>
+        </div>
+        <div class="diagram-card">
+          <app-prefecture-mortgage-per-month-diagram
+            [prefecture]="prefecture">
+          </app-prefecture-mortgage-per-month-diagram>
+        </div>
+        <div class="diagram-card">
+          <app-prefecture-areas-per-month-diagram
+            [prefecture]="prefecture">
+          </app-prefecture-areas-per-month-diagram>
+        </div>
+        <div class="diagram-card">
+          <app-prefecture-owners-per-month-diagram
+            [prefecture]="prefecture">
+          </app-prefecture-owners-per-month-diagram>
+        </div>
+        <div class="diagram-card">
+          <app-prefecture-properties-per-month-diagram
+            [prefecture]="prefecture">
+          </app-prefecture-properties-per-month-diagram>
+        </div>
+        <div class="diagram-card">
+          <app-prefecture-property-dealings-per-month-diagram
+            [prefecture]="prefecture">
+          </app-prefecture-property-dealings-per-month-diagram>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</ng-container>
+

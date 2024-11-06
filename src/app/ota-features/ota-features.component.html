@@ -1,0 +1,28 @@
+<!--<div class="flex flex-column">-->
+<!--  <h1 class="mx-auto inline-block">-->
+<!--    Μεταβλητές ΟΤΑ-->
+<!--  </h1>-->
+
+<!--  <div class="flex flex-column gap-3 features-container mx-auto mb-3">-->
+
+<!--    <div *ngFor="let feature of features" class="border-3 border-round border-500 p-3 cursor-pointer feature flex gap-2" (click)="goToFeatureReport(feature)">-->
+<!--      <i class="pi pi-file-o" style="font-size: 1.4rem"></i>-->
+<!--      <h3 class="font-bold my-1">{{ feature.name }}</h3>-->
+<!--&lt;!&ndash;      <p>{{ feature.description }}</p>&ndash;&gt;-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<div class="flex flex-column">
+  <h1 class="mx-auto inline-block text-center">
+    Μεταβλητές ΟΤΑ
+  </h1>
+
+  <div class="flex flex-column gap-3 features-container mx-auto mb-3">
+
+    <div *ngFor="let feature of features" class="feature-card border-round cursor-pointer p-4" (click)="goToFeatureReport(feature)">
+      <i class="pi pi-file-o feature-icon"></i>
+      <h3 class="feature-title font-bold">{{ feature.name }}</h3>
+    </div>
+  </div>
+</div>
+

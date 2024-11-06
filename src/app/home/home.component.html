@@ -1,0 +1,24 @@
+<section class="header flex flex-column align-items-center pt-7 pb-4 bg-black-alpha-10">
+  <h1 class="text-7xl text-blue-700 mb-4">Παρατηρητήριο ΟΤΑ</h1>
+  <p class="mt-0 text-700 text-xl">Εξερευνήστε τις μεταβλητές ΟΤΑ για τις περιφέρειες και τους νομούς της Ελλάδας.</p>
+</section>
+
+<section class="mt-3 pb-4 border-bottom-3 border-gray-300">
+  <div class="grid explore-options-container mx-auto mt-6">
+    <app-home-explore-option class="col-6" description="Εξερευνήστε τις περιοχές της Ελλάδας" link="regions" icon="pi-map" />
+    <app-home-explore-option class="col-6" description="Εξερευνήστε τις μεταβλητές ΟΤΑ" link="features" icon="pi-list" />
+  </div>
+</section>
+
+<section class="mt-3 flex flex-column align-items-center">
+  <p class="text-3xl">
+    Ανακαλύψτε τις μεταβλητές ΟΤΑ μέσω του
+    <strong class="cursor-pointer hover:text-blue-700 hover:underline" routerLink="explore-map">
+      διαδραστικού χάρτη
+    </strong>
+    .
+  </p>
+  <div class="map-image-container cursor-pointer">
+    <img class="w-full" src="assets/images/greek-map-prefectures.jpg" alt="greek-map-image" routerLink="explore-map" />
+  </div>
+</section>

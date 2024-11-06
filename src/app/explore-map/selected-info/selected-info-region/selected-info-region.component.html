@@ -1,0 +1,25 @@
+<div *ngIf="data" class="card p-4 border-round shadow-2" style="background-color: #e0f7fa; margin-top: 20px;">
+  <h3 class="mb-3 text-primary">ΠΕΡΙΦΕΡΕΙΑ {{ data.name }}</h3>
+  <div *ngIf="data.unemploymentRate" class="flex flex-column mb-3">
+    <strong>Ποσοστό Ανεργίας</strong>
+    <span>{{ data.unemploymentRate | number:'1.2-2' }}%</span>
+  </div>
+  <div *ngIf="data.shapeArea" class="flex flex-column">
+    <strong>Έκταση</strong>
+    <span>{{ (data.shapeArea / 1000000) | number:'1.2-2' }} km²</span>
+  </div>
+
+  <div *ngIf="currentPrefectures">
+    <h4 class="mb-1">Νομοί ({{ currentPrefectures.length }})</h4>
+    <ul class="list-none p-0 m-0 flex flex-column gap-1">
+      <li
+        *ngFor="let prefecture of currentPrefectures"
+        class="p-1 border-round border-50 bg-blue-200"
+      >
+        {{ prefecture.nameGr }}
+      </li>
+    </ul>
+  </div>
+
+</div>
+

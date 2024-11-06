@@ -1,0 +1,10 @@
+<div class="border-3 border-500 border-round p-3 cursor-pointer feature flex gap-2 align-items-center"
+     (click)="navigateToAreaDetails()" [ngClass]="borderClasses"
+>
+
+  <i class="pi pi-map-marker" [ngClass]="markerClasses" style="font-size: 1.5rem"></i>
+  <div class="flex flex-column gap-1">
+    <div class="text-600">{{ areaTypeName }}</div>
+    <h3 class="font-bold my-0"> {{ area.name }}</h3>
+  </div>
+</div>

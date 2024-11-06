@@ -1,0 +1,26 @@
+<div class="flex flex-column">
+  <h1 class="mx-auto inline-block">
+    Περιοχές
+  </h1>
+
+  <div class="flex flex-column gap-2 region-container mx-auto mb-3">
+    <p-iconField iconPosition="left">
+      <p-inputIcon styleClass="pi pi-search" />
+      <input #searchInput type="text" class="w-full" pInputText placeholder="Αναζήτηση" (keyup)="onFilter(searchInput.value)" />
+    </p-iconField>
+    <div class="area-list flex flex-column gap-2">
+      <app-area-item *ngFor="let area of filteredAreas" [area]="area" />
+    </div>
+
+<!--    <div  class="border-3 border-500 border-round p-3 cursor-pointer feature flex gap-2 align-items-center"-->
+<!--         (click)="onPlaceItemClicked(region)"-->
+<!--    >-->
+
+<!--      <i class="pi pi-map-marker" style="font-size: 1.5rem"></i>-->
+<!--      <div class="flex flex-column gap-1">-->
+<!--        <div class="text-500">Περιφέρεια</div>-->
+<!--        <h3 class="font-bold my-0"> {{ region.name }}</h3>-->
+<!--      </div>-->
+<!--    </div>-->
+  </div>
+</div>

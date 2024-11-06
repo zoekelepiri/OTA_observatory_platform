@@ -1,0 +1,79 @@
+//.prefecture-report-container {
+//  width: 95%;
+//  .header {
+//    max-width: 1200px;
+//  }
+//}
+//.diagrams-flex-container {
+//  display: flex;
+//  flex-wrap: wrap;
+//  gap: 20px; /* Adjust the gap between diagrams as needed */
+//}
+//
+//.diagrams-flex-container > * {
+//  flex: 0 0 calc(50% - 20px); /* Two diagrams per row with a gap */
+//  box-sizing: border-box;
+//}
+
+
+.prefecture-report-container {
+  width: 95%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f4f4f4; /* Light gray background for the container */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333; /* Dark gray for text */
+}
+
+.diagrams-flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.diagram-card {
+  flex: 1 1 calc(50% - 20px); /* Two diagrams per row with gap */
+  box-sizing: border-box;
+  background-color: #ffffff; /* White background for cards */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Slightly darker shadow for depth */
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Hide overflow for a cleaner look */
+  border: 1px solid #ddd; /* Light border for definition */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.diagram-card:hover {
+  transform: scale(1.05); /* Slightly increase the size of the card */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Enhance shadow for a lifted effect */
+}
+
+.diagram-card > * {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .diagram-card {
+    flex: 1 1 100%; /* Full width for smaller screens */
+  }
+}
+

@@ -1,0 +1,12 @@
+<div class="flex flex-column">
+  <app-selected-info-region
+    *ngIf="selectedRegion && !selectedPrefecture"
+    [selectedRegion]="selectedRegion"
+    [currentPrefectures]="currentPrefectures"
+  ></app-selected-info-region>
+  <app-selected-info-prefecture *ngIf="selectedPrefecture" [selectedPrefecture]="selectedPrefecture"></app-selected-info-prefecture>
+  <ng-container *ngIf="!selectedRegion && !selectedPrefecture">
+    <h2>Διαδραστικός Χάρτης</h2>
+    <p>Επιλέξτε Περιφέρεια για να δείτε λεπτομέρειες.</p>
+  </ng-container>
+</div>

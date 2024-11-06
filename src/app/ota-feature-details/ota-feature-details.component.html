@@ -1,0 +1,22 @@
+<ng-container *ngIf="!loading && otaVariable">
+  <div class="features-container mx-auto mt-7">
+    <h1>{{ otaVariable.name }}</h1>
+    <p>{{ otaVariable.description }}</p>
+
+
+<!--    if confiscation show this and this....-->
+
+    <app-confiscations-details *ngIf="otaVariable.variableType === OtaVariableEnum.CONFISCATION"></app-confiscations-details>
+    <app-area-details *ngIf="otaVariable.variableType === OtaVariableEnum.AREA"></app-area-details>
+    <app-mortgage-details *ngIf="otaVariable.variableType === OtaVariableEnum.MORTGAGES"></app-mortgage-details>
+    <app-owner-details *ngIf="otaVariable.variableType === OtaVariableEnum.OWNERS"></app-owner-details>
+    <app-properties-details *ngIf="otaVariable.variableType === OtaVariableEnum.PROPERTIES"></app-properties-details>
+    <app-property-dealing-details *ngIf="otaVariable.variableType === OtaVariableEnum.PROPERTY_DEALING"></app-property-dealing-details>
+
+
+
+
+
+
+  </div>
+</ng-container>

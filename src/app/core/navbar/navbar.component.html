@@ -1,0 +1,13 @@
+<nav class="navbar flex align-items-center gap-2 px-2">
+  <div class="navbar-brand font-bold cursor-pointer mr-4" routerLink="">
+    Παρατηρητήριο ΟΤΑ
+  </div>
+  <div class="flex justify-content-between w-full h-full">
+    <div class="flex gap-2 flex-grow-1 h-full align-items-center">
+      <app-nav-item class="h-full" *ngFor="let item of navItems" [navItemData]="item"></app-nav-item>
+    </div>
+    <div class="flex gap-2 justify-content-end">
+      <!--   No content for now   -->
+    </div>
+  </div>
+</nav>

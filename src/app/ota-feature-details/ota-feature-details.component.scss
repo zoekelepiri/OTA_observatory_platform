@@ -1,0 +1,9 @@
+.features-container {
+  max-width: 1200px;
+  width: 80%;
+  .feature {
+    &:hover {
+      background-color: #f1f1f1;
+    }
+  }
+}
