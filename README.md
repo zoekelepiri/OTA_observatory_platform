@@ -1,1 +1,1 @@
-# OTA_observatory
+# OTA_observatory_platform
